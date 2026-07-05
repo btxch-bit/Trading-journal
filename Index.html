@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trading Journal</title>
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>Trading Journal</h1>
+<div class="stats">
+<div class="card">
+<p>Total Trades</p>
+<h2 id="totalTrades">0</h2>
+</div>
+<div class="card">
+<p>Win Rate</p>
+<h2 id="winRate">0%</h2>
+</div>
+<div class="card">
+<p>Buy Win Rate</p>
+<h2 id="buyRate">0%</h2>
+</div>
+<div class="card">
+<p>Sell Win Rate</p>
+<h2 id="sellRate">0%</h2>
+</div>
+<div class="card">
+<p>Average RR</p>
+<h2 id="avgRR">0</h2>
+</div>
+</div>
+1
+<button id="newTradeBtn">
++ New Trade
+</button>
+<div id="tradeForm" class="hidden">
+<h3>New Trade</h3>
+<select id="direction">
+<option>BUY</option>
+<option>SELL</option>
+</select>
+<input
+id="rr"
+type="number"
+placeholder="RR (3 = 1:3)"
+>
+<select id="result">
+<option>WIN</option>
+<option>LOSS</option>
+</select>
+<button id="saveTrade">
+Save Trade
+</button>
+</div>
+<h3>History</h3>
+<div id="history"></div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
